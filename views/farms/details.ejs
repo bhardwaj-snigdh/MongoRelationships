@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><%= farm.name %></title>
+</head>
+<body>
+	<h1><%= farm.name %></h1>
+	<ul>
+		<li><%= farm.city %></li>
+		<li><%= farm.email %></li>
+	</ul>
+	<a href="/farms">Go Back</a>
+	<a href="/farms/<%= farm._id %>/edit">Edit</a>
+	<form action="/farms/<%= farm._id %>?_method=DELETE" method="POST">
+		<button type="submit">Delete</button>
+	</form>
+	<a href="/farms/<%= farm._id %>/products/new">Add Product</a>
+</body>
+</html>
